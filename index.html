@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mpho Lefophane Occupational Therapy | Care That Meets You</title>
+  <meta name="description" content="Mpho Lefophane Occupational Therapy provides client-centred occupational therapy, rehabilitation, paediatric support, functional capacity evaluations, assistive devices and home modifications in Pretoria.">
+  <meta name="theme-color" content="#22314a">
+  <meta property="og:title" content="Mpho Lefophane Occupational Therapy">
+  <meta property="og:description" content="Care that meets you — occupational therapy delivered in the comfort of your home, school or office.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { DEFAULT: '#22314a', 50:'#f2f4f7', 100:'#e2e7ee', 200:'#c2cbda', 700:'#1b2740', 800:'#161f34', 900:'#111827' },
+            coral: { 50:'#fdf4ef', 100:'#fbe6d9', 200:'#f4c8ab', 300:'#eba97c', 400:'#e28a52', 500:'#d06f3a', 600:'#b2582c', 700:'#8f4623', 800:'#6f371c' },
+            teal: { 50:'#eef5f2', 100:'#dbeae4', 200:'#b3d3c8', 300:'#89b8a8', 400:'#5f9c88', 500:'#437d6a', 600:'#356455', 700:'#2b5145', 800:'#234139' },
+            cream: { 50:'#fffdf9', 100:'#fbf5ea', 200:'#f4ead6' }
+          },
+          fontFamily: {
+            sans: ['DM Sans', 'sans-serif'],
+            display: ['Playfair Display', 'serif']
+          },
+          boxShadow: {
+            soft: '0 24px 60px -8px rgba(34, 24, 12, 0.16)',
+            warm: '0 10px 30px -6px rgba(176, 88, 44, 0.25)'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background-color: #fffdf9; }
+    .display { font-family: 'Playfair Display', serif; }
+    .grain {
+      background-image: radial-gradient(rgba(34,49,74,.06) 1px, transparent 1px);
+      background-size: 20px 20px;
+    }
+    .warm-orb { background: radial-gradient(circle at 35% 30%, rgba(226,138,82,.5), rgba(34,49,74,.97) 70%); }
+    .reveal { opacity: 0; transform: translateY(18px); transition: opacity .65s ease, transform .65s ease; }
+    .reveal.show { opacity: 1; transform: translateY(0); }
+    .nav-open { display: flex !important; }
+    .divider-swash { height: 1px; background: linear-gradient(90deg, transparent, rgba(208,111,58,.55), transparent); }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"MedicalBusiness",
+    "name":"Mpho Lefophane Occupational Therapy",
+    "description":"Client-centred occupational therapy and rehabilitation services in Pretoria.",
+    "telephone":"+27661342941",
+    "email":"mpholefophane@icloud.com",
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"Intercare, The Tramshed, Francis Baard Street",
+      "addressLocality":"Pretoria",
+      "postalCode":"0002",
+      "addressCountry":"ZA"
+    },
+    "areaServed":"Pretoria, Gauteng, South Africa"
+  }
+  </script>
+</head>
+
+<body class="bg-cream-50 text-stone-800 antialiased">
+  <header class="fixed inset-x-0 top-0 z-50">
+    <div class="mx-auto max-w-7xl px-4 pt-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center justify-between rounded-2xl border border-cream-200 bg-cream-50/90 px-4 py-3 shadow-lg shadow-navy/5 backdrop-blur-md">
+        <a href="#home" class="flex items-center gap-3">
+          <img src="assets/logo.jpg" alt="Mpho Lefophane Occupational Therapy logo" class="h-11 w-auto rounded-lg object-contain">
+          <div class="hidden sm:block leading-tight">
+            <p class="font-semibold text-navy">Mpho Lefophane</p>
+            <p class="text-xs text-stone-500">Occupational Therapy</p>
+          </div>
+        </a>
+
+        <div id="navMenu" class="hidden items-center gap-7 md:flex">
+          <a href="#about" class="text-sm font-medium text-stone-600 transition hover:text-coral-600">About</a>
+          <a href="#services" class="text-sm font-medium text-stone-600 transition hover:text-coral-600">Services</a>
+          <a href="#approach" class="text-sm font-medium text-stone-600 transition hover:text-coral-600">Our approach</a>
+          <a href="#contact" class="rounded-full bg-navy px-5 py-2.5 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-coral-600">Book / enquire</a>
+        </div>
+
+        <button id="menuBtn" class="rounded-xl border border-stone-200 p-2.5 text-navy md:hidden" aria-label="Open menu" aria-expanded="false">
+          <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </nav>
+      <div id="mobileMenu" class="mt-2 hidden flex-col rounded-2xl border border-cream-200 bg-cream-50 p-4 shadow-xl md:hidden">
+        <a href="#about" class="rounded-xl px-4 py-3 font-medium hover:bg-coral-50">About</a>
+        <a href="#services" class="rounded-xl px-4 py-3 font-medium hover:bg-coral-50">Services</a>
+        <a href="#approach" class="rounded-xl px-4 py-3 font-medium hover:bg-coral-50">Our approach</a>
+        <a href="#contact" class="mt-2 rounded-xl bg-navy px-4 py-3 text-center font-semibold text-white">Book / enquire</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="grain relative overflow-hidden pt-32 lg:pt-40">
+      <div class="absolute -left-32 top-24 h-72 w-72 rounded-full bg-coral-100 opacity-70 blur-3xl"></div>
+      <div class="absolute -right-32 top-10 h-96 w-96 rounded-full bg-teal-100 opacity-70 blur-3xl"></div>
+
+      <div class="relative mx-auto grid max-w-7xl items-center gap-14 px-4 pb-20 sm:px-6 lg:grid-cols-[1.05fr_.95fr] lg:px-8 lg:pb-28">
+        <div class="reveal">
+          <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-coral-200 bg-cream-50/80 px-4 py-2 text-sm font-semibold text-coral-600">
+            <span class="h-2 w-2 rounded-full bg-coral-500"></span>
+            Professional Occupational Therapy
+          </div>
+
+          <h1 class="max-w-3xl text-5xl font-semibold leading-[1.05] tracking-tight text-navy sm:text-6xl lg:text-7xl">
+            Care that meets you <span class="display font-medium italic text-coral-600">where you are.</span>
+          </h1>
+
+          <p class="mt-7 max-w-2xl text-lg leading-8 text-stone-600 sm:text-xl">
+            Client-centred occupational therapy designed around the person, their goals and the environments that matter most — home, school or office.
+          </p>
+
+          <div class="mt-9 flex flex-col gap-3 sm:flex-row">
+            <a href="https://wa.me/27661342941?text=Hello%20Mpho%2C%20I%27d%20like%20to%20make%20an%20occupational%20therapy%20enquiry." class="inline-flex items-center justify-center rounded-full bg-navy px-7 py-3.5 font-semibold text-white shadow-lg shadow-navy/20 transition hover:-translate-y-0.5 hover:bg-coral-600">
+              Make an enquiry
+            </a>
+            <a href="#services" class="inline-flex items-center justify-center rounded-full border border-stone-200 bg-cream-50 px-7 py-3.5 font-semibold text-navy transition hover:border-coral-300 hover:bg-coral-50">
+              Explore services
+            </a>
+          </div>
+
+          <div class="mt-10 flex flex-wrap gap-x-7 gap-y-3 text-sm text-stone-500">
+            <span class="inline-flex items-center gap-1.5"><svg class="h-4 w-4 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Home-based care</span>
+            <span class="inline-flex items-center gap-1.5"><svg class="h-4 w-4 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>School support</span>
+            <span class="inline-flex items-center gap-1.5"><svg class="h-4 w-4 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Office consultations</span>
+          </div>
+        </div>
+
+        <div class="reveal relative mx-auto w-full max-w-xl">
+          <div class="absolute -inset-4 rounded-[3rem] bg-coral-100/60 blur-2xl"></div>
+          <div class="warm-orb relative overflow-hidden rounded-[2.5rem] p-3 shadow-soft">
+            <div class="relative overflow-hidden rounded-[2rem] bg-cream-50">
+              <img src="assets/mpho-portrait.jpg" alt="Mpho Lefophane, Occupational Therapist" class="h-[520px] w-full object-cover object-[75%_15%] sm:h-[600px]">
+              <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy/95 via-navy/55 to-transparent p-7 pt-24 text-white">
+                <p class="text-sm font-semibold uppercase tracking-[0.2em] text-coral-200">Mpho Lefophane</p>
+                <p class="display mt-1 text-2xl">Occupational Therapist</p>
+                <p class="mt-2 text-sm text-cream-100/90">PR No. 1296477 · HPCSA No. OT 0115665</p>
+              </div>
+            </div>
+          </div>
+          <div class="absolute -bottom-6 -left-5 hidden rounded-2xl bg-cream-50 p-4 shadow-xl sm:block">
+            <div class="flex items-center gap-3">
+              <div class="flex h-11 w-11 items-center justify-center rounded-full bg-coral-100 text-coral-600">
+                <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 21s8-4.5 8-10.5A4.5 4.5 0 0012 7a4.5 4.5 0 00-8 3.5C4 16.5 12 21 12 21z"/></svg>
+              </div>
+              <div><p class="font-semibold text-navy">Compassionate care</p><p class="text-xs text-stone-500">Personalised to your needs</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="bg-cream-50 py-20 lg:py-28">
+      <div class="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
+        <div class="reveal">
+          <p class="text-sm font-bold uppercase tracking-[0.2em] text-coral-600">Meet Mpho</p>
+          <h2 class="mt-3 max-w-xl text-4xl font-semibold tracking-tight text-navy sm:text-5xl">
+            Therapy built around real life.
+          </h2>
+          <p class="mt-6 max-w-xl text-lg leading-8 text-stone-600">
+            Occupational therapy is about helping people participate in the everyday activities that give life meaning — at home, at school, at work and in the community.
+          </p>
+          <p class="mt-4 max-w-xl leading-7 text-stone-600">
+            Mpho Lefophane provides personalised assessment, rehabilitation and practical support across adult, paediatric and developmental needs. The practice brings therapy into familiar environments to make care more comfortable, consistent and meaningful.
+          </p>
+          <div class="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3">
+            <div class="rounded-2xl bg-coral-50 p-5"><p class="display text-2xl font-semibold text-coral-600">01</p><p class="mt-1 text-sm text-stone-600">Person-centred</p></div>
+            <div class="rounded-2xl bg-teal-50 p-5"><p class="display text-2xl font-semibold text-teal-700">02</p><p class="mt-1 text-sm text-stone-600">Goal-focused</p></div>
+            <div class="rounded-2xl bg-coral-50 p-5"><p class="display text-2xl font-semibold text-coral-600">03</p><p class="mt-1 text-sm text-stone-600">Practical</p></div>
+          </div>
+        </div>
+
+        <div class="reveal rounded-[2rem] bg-navy p-8 text-white shadow-soft sm:p-10">
+          <p class="text-sm font-bold uppercase tracking-[0.2em] text-coral-200">Why occupational therapy?</p>
+          <h3 class="display mt-4 text-3xl font-semibold italic">Helping you do the things that matter.</h3>
+          <div class="divider-swash mt-6"></div>
+          <div class="mt-7 space-y-5">
+            <div class="flex gap-4"><span class="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white/10 text-coral-200"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><p class="leading-7 text-cream-100/90">Support independence and participation in everyday activities.</p></div>
+            <div class="flex gap-4"><span class="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white/10 text-coral-200"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><p class="leading-7 text-cream-100/90">Build practical skills following injury, illness or developmental challenges.</p></div>
+            <div class="flex gap-4"><span class="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white/10 text-coral-200"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><p class="leading-7 text-cream-100/90">Adapt environments and recommend assistive solutions where needed.</p></div>
+            <div class="flex gap-4"><span class="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white/10 text-coral-200"><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><p class="leading-7 text-cream-100/90">Support children and families with development, learning and participation.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="bg-coral-50/40 py-20 lg:py-28">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal max-w-2xl">
+          <p class="text-sm font-bold uppercase tracking-[0.2em] text-coral-600">Services</p>
+          <h2 class="mt-3 text-4xl font-semibold tracking-tight text-navy sm:text-5xl">Support for different stages of life.</h2>
+          <p class="mt-5 text-lg leading-8 text-stone-600">A broad occupational therapy offering, with care tailored to the individual rather than a one-size-fits-all programme.</p>
+        </div>
+
+        <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <article class="reveal rounded-3xl bg-cream-50 p-7 shadow-sm ring-1 ring-stone-100 transition hover:-translate-y-1 hover:shadow-warm">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-coral-100 text-coral-600">
+              <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12h4l2 6 4-14 2 8h6"/></svg>
+            </div>
+            <h3 class="mt-5 text-xl font-semibold text-navy">Physical Rehabilitation</h3>
+            <p class="mt-3 leading-7 text-stone-600">Support following stroke, brain injury, motor vehicle accidents and other conditions affecting function and independence.</p>
+          </article>
+
+          <article class="reveal rounded-3xl bg-cream-50 p-7 shadow-sm ring-1 ring-stone-100 transition hover:-translate-y-1 hover:shadow-warm">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-teal-100 text-teal-700">
+              <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21s8-4.5 8-10.5A4.5 4.5 0 0012 7a4.5 4.5 0 00-8 3.5C4 16.5 12 21 12 21z"/></svg>
+            </div>
+            <h3 class="mt-5 text-xl font-semibold text-navy">Mental Health Rehabilitation</h3>
+            <p class="mt-3 leading-7 text-stone-600">Occupational therapy support focused on participation, routines, coping and meaningful daily activities.</p>
+          </article>
+
+          <article class="reveal rounded-3xl bg-cream-50 p-7 shadow-sm ring-1 ring-stone-100 transition hover:-translate-y-1 hover:shadow-warm">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-coral-100 text-coral-600">
+              <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.75"><circle cx="12" cy="8" r="3.2"/><path stroke-linecap="round" stroke-linejoin="round" d="M5.5 20c1-3.4 3.7-5.2 6.5-5.2s5.5 1.8 6.5 5.2"/></svg>
+            </div>
+            <h3 class="mt-5 text-xl font-semibold text-navy">Paediatric Rehabilitation</h3>
+            <p class="mt-3 leading-7 text-stone-600">Support for children with autism, cerebral palsy, ADHD, Down syndrome and other developmental needs.</p>
+          </article>
+
+          <article class="reveal rounded-3xl bg-cream-50 p-7 shadow-sm ring-1 ring-stone-100 transition hover:-translate-y-1 hover:shadow-warm">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-teal-100 text-teal-700">
+              <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3c1 2.5 1 4.5-.5 6C10 10.5 8 10.5 7 9c-.8-1.6 0-3.6 2-4.5A8 8 0 0112 3z"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v12"/></svg>
+            </div>
+            <h3 class="mt-5 text-xl font-semibold text-navy">Early Intervention</h3>
+            <p class="mt-3 leading-7 text-stone-600">Infant and early childhood support that helps families understand needs and encourage participation.</p>
+          </article>
+
+          <article class="reveal rounded-3xl bg-cream-50 p-7 shadow-sm ring-1 ring-stone-100 transition hover:-translate-y-1 hover:shadow-warm">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-coral-100 text-coral-600">
+              <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.75"><rect x="6" y="4" width="12" height="16" rx="2"/><path stroke-linecap="round" stroke-linejoin="round" d="M9 4V3a1 1 0 011-1h4a1 1 0 011 1v1M8.5 12.5l2 2 4-4"/></svg>
+            </div>
+            <h3 class="mt-5 text-xl font-semibold text-navy">School Assessments</h3>
+            <p class="mt-3 leading-7 text-stone-600">Assessments and learning support to help children participate more effectively in the school environment.</p>
+          </article>
+
+          <article class="reveal rounded-3xl bg-cream-50 p-7 shadow-sm ring-1 ring-stone-100 transition hover:-translate-y-1 hover:shadow-warm">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-teal-100 text-teal-700">
+              <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.75"><circle cx="9" cy="17" r="3.2"/><path stroke-linecap="round" stroke-linejoin="round" d="M9 17V9a1.4 1.4 0 011.4-1.4H12l3.5 8.5H19"/><circle cx="8.7" cy="5" r="1.3"/></svg>
+            </div>
+            <h3 class="mt-5 text-xl font-semibold text-navy">Assistive Devices</h3>
+            <p class="mt-3 leading-7 text-stone-600">Assessment, ordering and issuing of assistive devices, including mobility equipment such as wheelchairs.</p>
+          </article>
+
+          <article class="reveal rounded-3xl bg-cream-50 p-7 shadow-sm ring-1 ring-stone-100 transition hover:-translate-y-1 hover:shadow-warm">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-coral-100 text-coral-600">
+              <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M4 11.5L12 4l8 7.5"/><path stroke-linecap="round" stroke-linejoin="round" d="M6 10v9a1 1 0 001 1h10a1 1 0 001-1v-9"/></svg>
+            </div>
+            <h3 class="mt-5 text-xl font-semibold text-navy">Home Modifications</h3>
+            <p class="mt-3 leading-7 text-stone-600">Practical recommendations to make living spaces safer, more accessible and better suited to individual needs.</p>
+          </article>
+
+          <article class="reveal rounded-3xl bg-cream-50 p-7 shadow-sm ring-1 ring-stone-100 transition hover:-translate-y-1 hover:shadow-warm">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-teal-100 text-teal-700">
+              <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.75"><rect x="5" y="3" width="14" height="18" rx="2"/><path stroke-linecap="round" stroke-linejoin="round" d="M8.5 8h7M8.5 12h7M8.5 16h4"/></svg>
+            </div>
+            <h3 class="mt-5 text-xl font-semibold text-navy">Functional Capacity & Medico-Legal</h3>
+            <p class="mt-3 leading-7 text-stone-600">Functional capacity evaluations and medico-legal reporting for relevant cases.</p>
+          </article>
+
+          <article class="reveal flex flex-col justify-center rounded-3xl bg-navy p-7 text-white shadow-sm">
+            <p class="display text-xl italic text-coral-200">"Care that meets you where you are."</p>
+            <p class="mt-3 text-sm leading-6 text-cream-100/80">A guiding principle behind every session, assessment and recommendation.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="approach" class="py-20 lg:py-28">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid items-center gap-12 lg:grid-cols-[.85fr_1.15fr]">
+          <div class="reveal">
+            <p class="text-sm font-bold uppercase tracking-[0.2em] text-coral-600">Our approach</p>
+            <h2 class="mt-3 text-4xl font-semibold tracking-tight text-navy sm:text-5xl">Therapy where it matters most.</h2>
+            <p class="mt-6 text-lg leading-8 text-stone-600">The practice can meet clients in familiar settings, helping therapy connect with the routines and environments of everyday life.</p>
+          </div>
+
+          <div class="grid gap-4 sm:grid-cols-3">
+            <div class="reveal rounded-3xl border border-coral-100 bg-coral-50 p-6">
+              <p class="display text-2xl font-semibold text-coral-600">01</p>
+              <h3 class="mt-8 text-xl font-semibold text-navy">At home</h3>
+              <p class="mt-3 text-sm leading-6 text-stone-600">Care in the environment where daily routines happen.</p>
+            </div>
+            <div class="reveal rounded-3xl border border-teal-100 bg-teal-50 p-6">
+              <p class="display text-2xl font-semibold text-teal-700">02</p>
+              <h3 class="mt-8 text-xl font-semibold text-navy">At school</h3>
+              <p class="mt-3 text-sm leading-6 text-stone-600">Support for learning, participation and school-based needs.</p>
+            </div>
+            <div class="reveal rounded-3xl border border-coral-100 bg-coral-50 p-6">
+              <p class="display text-2xl font-semibold text-coral-600">03</p>
+              <h3 class="mt-8 text-xl font-semibold text-navy">At our office</h3>
+              <p class="mt-3 text-sm leading-6 text-stone-600">Professional consultations at the practice in Pretoria.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="warm-orb py-20 text-white lg:py-24">
+      <div class="mx-auto max-w-5xl px-4 text-center sm:px-6">
+        <div class="reveal">
+          <p class="text-sm font-bold uppercase tracking-[0.25em] text-coral-200">Care that meets you</p>
+          <h2 class="display mt-4 text-4xl font-semibold italic sm:text-5xl">Let's work toward meaningful progress.</h2>
+          <p class="mx-auto mt-5 max-w-2xl text-lg leading-8 text-cream-100/90">Whether you are looking for rehabilitation, developmental support, an assessment or practical adaptations, start with a conversation.</p>
+          <a href="https://wa.me/27661342941?text=Hello%20Mpho%2C%20I%27d%20like%20to%20make%20an%20occupational%20therapy%20enquiry." class="mt-8 inline-flex rounded-full bg-cream-50 px-7 py-3.5 font-semibold text-navy transition hover:-translate-y-0.5 hover:bg-coral-100">Start an enquiry on WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="bg-teal-50/50 py-20 lg:py-28">
+      <div class="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[1fr_.85fr] lg:px-8">
+        <div class="reveal">
+          <p class="text-sm font-bold uppercase tracking-[0.2em] text-coral-600">Contact</p>
+          <h2 class="mt-3 text-4xl font-semibold tracking-tight text-navy sm:text-5xl">Ready when you are.</h2>
+          <p class="mt-5 max-w-xl text-lg leading-8 text-stone-600">Get in touch to discuss your needs, ask a question or enquire about an appointment.</p>
+
+          <div class="mt-9 space-y-4">
+            <a href="tel:+27661342941" class="flex items-center gap-4 rounded-2xl bg-cream-50 p-5 shadow-sm ring-1 ring-stone-100 transition hover:ring-coral-200">
+              <span class="flex h-11 w-11 items-center justify-center rounded-full bg-coral-100 text-coral-600">
+                <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M4 5c0-.6.4-1 1-1h2.2c.5 0 .9.3 1 .8L9 8c.1.4 0 .8-.3 1.1L7.2 10.6a12 12 0 006.2 6.2l1.5-1.5c.3-.3.7-.4 1.1-.3l3.2.8c.5.1.8.5.8 1V19c0 .6-.4 1-1 1h-1C9.9 20 4 14.1 4 6.5V5z"/></svg>
+              </span>
+              <div><p class="text-xs font-semibold uppercase tracking-wider text-stone-400">Phone</p><p class="mt-1 font-semibold text-navy">066 134 2941</p></div>
+            </a>
+            <a href="mailto:mpholefophane@icloud.com" class="flex items-center gap-4 rounded-2xl bg-cream-50 p-5 shadow-sm ring-1 ring-stone-100 transition hover:ring-coral-200">
+              <span class="flex h-11 w-11 items-center justify-center rounded-full bg-coral-100 text-coral-600">
+                <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.75"><rect x="3.5" y="5.5" width="17" height="13" rx="2"/><path stroke-linecap="round" stroke-linejoin="round" d="M4 6.5l8 6.5 8-6.5"/></svg>
+              </span>
+              <div><p class="text-xs font-semibold uppercase tracking-wider text-stone-400">Email</p><p class="mt-1 font-semibold text-navy">mpholefophane@icloud.com</p></div>
+            </a>
+            <div class="flex items-center gap-4 rounded-2xl bg-cream-50 p-5 shadow-sm ring-1 ring-stone-100">
+              <span class="flex h-11 w-11 items-center justify-center rounded-full bg-coral-100 text-coral-600">
+                <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21s7-6.1 7-11.5a7 7 0 10-14 0C5 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.4"/></svg>
+              </span>
+              <div><p class="text-xs font-semibold uppercase tracking-wider text-stone-400">Office</p><p class="mt-1 font-semibold text-navy">Intercare, The Tramshed, Francis Baard St, Pretoria 0002</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal rounded-[2rem] bg-cream-50 p-7 shadow-soft sm:p-9">
+          <p class="text-sm font-bold uppercase tracking-[0.2em] text-coral-600">Professional details</p>
+          <h3 class="mt-3 text-2xl font-semibold text-navy">A qualified, registered practitioner.</h3>
+          <div class="mt-7 divide-y divide-stone-100">
+            <div class="flex justify-between gap-4 py-4"><span class="text-stone-500">Practice number</span><strong class="text-navy">1296477</strong></div>
+            <div class="flex justify-between gap-4 py-4"><span class="text-stone-500">HPCSA number</span><strong class="text-navy">OT 0115665</strong></div>
+            <div class="flex justify-between gap-4 py-4"><span class="text-stone-500">Service area</span><strong class="text-right text-navy">Pretoria & surrounding areas</strong></div>
+          </div>
+          <a href="https://wa.me/27661342941?text=Hello%20Mpho%2C%20I%27d%20like%20to%20make%20an%20occupational%20therapy%20enquiry." class="mt-7 flex w-full items-center justify-center rounded-xl bg-navy px-5 py-3.5 font-semibold text-white transition hover:bg-coral-600">Contact Mpho</a>
+          <p class="mt-4 text-center text-xs leading-5 text-stone-400">Please avoid sending sensitive medical information through an ordinary contact form or unsecured message.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-cream-50 py-10">
+    <div class="mx-auto flex max-w-7xl flex-col gap-5 px-4 sm:px-6 md:flex-row md:items-center md:justify-between lg:px-8">
+      <div class="flex items-center gap-3">
+        <img src="assets/logo.jpg" alt="" class="h-10 w-auto rounded-lg">
+        <div><p class="font-semibold text-navy">Mpho Lefophane Occupational Therapy</p><p class="text-xs text-stone-500">Care That Meets You</p></div>
+      </div>
+      <p class="text-sm text-stone-400">© <span id="year"></span> Mpho Lefophane Occupational Therapy. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/27661342941?text=Hello%20Mpho%2C%20I%27d%20like%20to%20make%20an%20occupational%20therapy%20enquiry." aria-label="Chat on WhatsApp" class="fixed bottom-5 right-5 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-navy text-white shadow-2xl ring-4 ring-cream-50 transition hover:-translate-y-1 md:hidden">
+    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M4 5c0-.6.4-1 1-1h2.2c.5 0 .9.3 1 .8L9 8c.1.4 0 .8-.3 1.1L7.2 10.6a12 12 0 006.2 6.2l1.5-1.5c.3-.3.7-.4 1.1-.3l3.2.8c.5.1.8.5.8 1V19c0 .6-.4 1-1 1h-1C9.9 20 4 14.1 4 6.5V5z"/></svg>
+  </a>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    menuBtn.addEventListener('click', () => {
+      const open = mobileMenu.classList.toggle('nav-open');
+      menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('nav-open');
+        menuBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
