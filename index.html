@@ -37,7 +37,7 @@
   </script>
   <style>
     html { scroll-behavior: smooth; }
-    body { font-family: 'DM Sans', sans-serif; background-color: #fffdf9; }
+    body { font-family: 'DM Sans', sans-serif; background-color: #fffdf9; animation: pageFade .5s ease; }
     .display { font-family: 'Playfair Display', serif; }
     .grain {
       background-image: radial-gradient(rgba(34,49,74,.06) 1px, transparent 1px);
@@ -48,6 +48,35 @@
     .reveal.show { opacity: 1; transform: translateY(0); }
     .nav-open { display: flex !important; }
     .divider-swash { height: 1px; background: linear-gradient(90deg, transparent, rgba(208,111,58,.55), transparent); }
+
+    /* Header: slides away on scroll-down, slides back in on scroll-up */
+    #siteHeader { transition: transform .35s ease; }
+    #siteHeader.header-hidden { transform: translateY(-130%); }
+
+    /* Active section indicator in the nav */
+    .nav-link { position: relative; }
+    .nav-link.is-active { color: #b2582c; }
+
+    /* Scroll progress bar */
+    #scrollProgress { transform: scaleX(0); transform-origin: left; transition: transform .1s linear; }
+
+    /* Back-to-top button */
+    #backToTop { opacity: 0; transform: translateY(.75rem); pointer-events: none; transition: opacity .3s ease, transform .3s ease; }
+    #backToTop.is-visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
+
+    /* Images fade in once loaded instead of popping in */
+    .img-fade { opacity: 0; transition: opacity .6s ease; }
+    .img-fade.is-loaded { opacity: 1; }
+
+    @keyframes pageFade { from { opacity: 0; } to { opacity: 1; } }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      body { animation: none; }
+      .reveal { transition: none; opacity: 1; transform: none; }
+      .img-fade { transition: none; opacity: 1; }
+      #siteHeader, #backToTop, #scrollProgress { transition: none; }
+    }
   </style>
   <script type="application/ld+json">
   {
@@ -70,11 +99,12 @@
 </head>
 
 <body class="bg-cream-50 text-stone-800 antialiased">
-  <header class="fixed inset-x-0 top-0 z-50">
+  <div id="scrollProgress" class="fixed inset-x-0 top-0 z-[60] h-[3px] bg-gradient-to-r from-coral-500 to-navy"></div>
+  <header id="siteHeader" class="fixed inset-x-0 top-0 z-50">
     <div class="mx-auto max-w-7xl px-4 pt-4 sm:px-6 lg:px-8">
       <nav class="flex items-center justify-between rounded-2xl border border-cream-200 bg-cream-50/90 px-4 py-3 shadow-lg shadow-navy/5 backdrop-blur-md">
         <a href="#home" class="flex items-center gap-3">
-          <img src="assets/logo.jpg" alt="Mpho Lefophane Occupational Therapy logo" class="h-11 w-auto rounded-lg object-contain">
+          <img src="assets/logo.jpg" width="1182" height="922" alt="Mpho Lefophane Occupational Therapy logo" class="h-11 w-auto rounded-lg object-contain">
           <div class="hidden sm:block leading-tight">
             <p class="font-semibold text-navy">Mpho Lefophane</p>
             <p class="text-xs text-stone-500">Occupational Therapy</p>
@@ -82,10 +112,10 @@
         </a>
 
         <div id="navMenu" class="hidden items-center gap-7 md:flex">
-          <a href="#about" class="text-sm font-medium text-stone-600 transition hover:text-coral-600">About</a>
-          <a href="#milestones" class="text-sm font-medium text-stone-600 transition hover:text-coral-600">Milestones</a>
-          <a href="#services" class="text-sm font-medium text-stone-600 transition hover:text-coral-600">Services</a>
-          <a href="#approach" class="text-sm font-medium text-stone-600 transition hover:text-coral-600">Our approach</a>
+          <a href="#about" class="nav-link text-sm font-medium text-stone-600 transition hover:text-coral-600">About</a>
+          <a href="#milestones" class="nav-link text-sm font-medium text-stone-600 transition hover:text-coral-600">Milestones</a>
+          <a href="#services" class="nav-link text-sm font-medium text-stone-600 transition hover:text-coral-600">Services</a>
+          <a href="#approach" class="nav-link text-sm font-medium text-stone-600 transition hover:text-coral-600">Our approach</a>
           <a href="#contact" class="rounded-full bg-navy px-5 py-2.5 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-coral-600">Book / enquire</a>
         </div>
 
@@ -143,7 +173,7 @@
           <div class="absolute -inset-4 rounded-[3rem] bg-coral-100/60 blur-2xl"></div>
           <div class="warm-orb relative overflow-hidden rounded-[2.5rem] p-3 shadow-soft">
             <div class="relative overflow-hidden rounded-[2rem] bg-cream-50">
-              <img src="assets/mpho-portrait2.jpg" alt="Mpho Lefophane, Occupational Therapist" class="h-[520px] w-full object-cover object-[75%_15%] sm:h-[600px]">
+              <img src="assets/mpho-portrait2.jpg" width="749" height="1248" alt="Mpho Lefophane, Occupational Therapist" fetchpriority="high" class="img-fade h-[520px] w-full object-cover object-[75%_15%] sm:h-[600px]" onload="this.classList.add('is-loaded')">
               <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy/95 via-navy/55 to-transparent p-7 pt-24 text-white">
                 <p class="text-sm font-semibold uppercase tracking-[0.2em] text-coral-200">Mpho Lefophane</p>
                 <p class="display mt-1 text-2xl">Occupational Therapist</p>
@@ -163,7 +193,7 @@
       </div>
     </section>
 
-    <section id="about" class="bg-cream-50 py-20 lg:py-28">
+    <section id="about" class="scroll-mt-28 bg-cream-50 py-20 lg:py-28">
       <div class="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
         <div class="reveal">
           <p class="text-sm font-bold uppercase tracking-[0.2em] text-coral-600">Meet Mpho</p>
@@ -197,7 +227,7 @@
       </div>
     </section>
 
-    <section id="milestones" class="bg-cream-50 py-20 lg:py-28">
+    <section id="milestones" class="scroll-mt-28 bg-cream-50 py-20 lg:py-28">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="reveal max-w-2xl">
           <p class="text-sm font-bold uppercase tracking-[0.2em] text-coral-600">Milestones</p>
@@ -209,7 +239,7 @@
           <div class="reveal relative lg:col-span-2">
             <div class="absolute -inset-3 rounded-[2.5rem] bg-coral-100/60 blur-2xl"></div>
             <div class="relative overflow-hidden rounded-[2rem] shadow-soft">
-              <img src="assets/grad.jpg" alt="Mpho Lefophane graduating as an Occupational Therapist" class="h-[420px] w-full object-cover object-top sm:h-[480px]">
+              <img src="assets/grad.jpg" width="900" height="1241" alt="Mpho Lefophane graduating as an Occupational Therapist" loading="lazy" decoding="async" class="img-fade h-[420px] w-full object-cover object-top sm:h-[480px]" onload="this.classList.add('is-loaded')">
               <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy/90 via-navy/40 to-transparent p-6 pt-16 text-white">
                 <p class="text-xs font-semibold uppercase tracking-[0.2em] text-coral-200">A milestone earned</p>
                 <p class="display mt-1 text-xl italic">Graduating as an Occupational Therapist</p>
@@ -219,7 +249,7 @@
 
           <div class="reveal relative lg:col-span-3 lg:-ml-10">
             <div class="relative overflow-hidden rounded-[2rem] shadow-soft ring-8 ring-cream-50">
-              <img src="assets/group.jpg" alt="Group photo from a recent occupational therapy group session" class="h-[280px] w-full object-cover sm:h-[340px] lg:h-[420px]">
+              <img src="assets/group.jpg" width="1600" height="1067" alt="Group photo from a recent occupational therapy group session" loading="lazy" decoding="async" class="img-fade h-[280px] w-full object-cover sm:h-[340px] lg:h-[420px]" onload="this.classList.add('is-loaded')">
               <div class="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/0 to-transparent"></div>
               <div class="absolute inset-x-0 bottom-0 p-6 pt-12 text-white">
                 <p class="text-xs font-semibold uppercase tracking-[0.2em] text-coral-200">Community in practice</p>
@@ -231,7 +261,7 @@
       </div>
     </section>
 
-    <section id="services" class="bg-coral-50/40 py-20 lg:py-28">
+    <section id="services" class="scroll-mt-28 bg-coral-50/40 py-20 lg:py-28">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="reveal max-w-2xl">
           <p class="text-sm font-bold uppercase tracking-[0.2em] text-coral-600">Services</p>
@@ -312,7 +342,7 @@
       </div>
     </section>
 
-    <section id="approach" class="py-20 lg:py-28">
+    <section id="approach" class="scroll-mt-28 py-20 lg:py-28">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="grid items-center gap-12 lg:grid-cols-[.85fr_1.15fr]">
           <div class="reveal">
@@ -353,7 +383,7 @@
       </div>
     </section>
 
-    <section id="contact" class="bg-teal-50/50 py-20 lg:py-28">
+    <section id="contact" class="scroll-mt-28 bg-teal-50/50 py-20 lg:py-28">
       <div class="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[1fr_.85fr] lg:px-8">
         <div class="reveal">
           <p class="text-sm font-bold uppercase tracking-[0.2em] text-coral-600">Contact</p>
@@ -400,7 +430,7 @@
   <footer class="bg-cream-50 py-10">
     <div class="mx-auto flex max-w-7xl flex-col gap-5 px-4 sm:px-6 md:flex-row md:items-center md:justify-between lg:px-8">
       <div class="flex items-center gap-3">
-        <img src="assets/logo.jpg" alt="" class="h-10 w-auto rounded-lg">
+        <img src="assets/logo.jpg" width="1182" height="922" alt="" loading="lazy" decoding="async" class="h-10 w-auto rounded-lg">
         <div><p class="font-semibold text-navy">Mpho Lefophane Occupational Therapy</p><p class="text-xs text-stone-500">Care That Meets You</p></div>
       </div>
       <p class="text-sm text-stone-400">© <span id="year"></span> Mpho Lefophane Occupational Therapy. All rights reserved.</p>
@@ -410,6 +440,10 @@
   <a href="https://wa.me/27661342941?text=Hello%20Mpho%2C%20I%27d%20like%20to%20make%20an%20occupational%20therapy%20enquiry." aria-label="Chat on WhatsApp" class="fixed bottom-5 right-5 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-navy text-white shadow-2xl ring-4 ring-cream-50 transition hover:-translate-y-1 md:hidden">
     <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M4 5c0-.6.4-1 1-1h2.2c.5 0 .9.3 1 .8L9 8c.1.4 0 .8-.3 1.1L7.2 10.6a12 12 0 006.2 6.2l1.5-1.5c.3-.3.7-.4 1.1-.3l3.2.8c.5.1.8.5.8 1V19c0 .6-.4 1-1 1h-1C9.9 20 4 14.1 4 6.5V5z"/></svg>
   </a>
+
+  <button id="backToTop" aria-label="Back to top" class="fixed bottom-24 right-5 z-40 flex h-12 w-12 items-center justify-center rounded-full bg-cream-50 text-navy shadow-xl ring-1 ring-stone-200 transition hover:-translate-y-1 hover:text-coral-600 md:bottom-5">
+    <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/></svg>
+  </button>
 
   <script>
     const menuBtn = document.getElementById('menuBtn');
@@ -439,6 +473,66 @@
     }, { threshold: 0.12 });
 
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Images already loaded from cache won't reliably re-fire onload — catch those.
+    document.querySelectorAll('.img-fade').forEach(img => {
+      if (img.complete) img.classList.add('is-loaded');
+    });
+
+    // Header: hides on scroll-down, reveals on scroll-up. Scroll progress bar.
+    // Both driven off a single rAF-throttled scroll listener for smoothness.
+    const header = document.getElementById('siteHeader');
+    const scrollProgress = document.getElementById('scrollProgress');
+    const backToTop = document.getElementById('backToTop');
+    let lastY = window.scrollY;
+    let ticking = false;
+
+    function onScroll() {
+      const y = Math.max(window.scrollY, 0);
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      scrollProgress.style.transform = `scaleX(${docHeight > 0 ? Math.min(y / docHeight, 1) : 0})`;
+
+      const menuOpen = mobileMenu.classList.contains('nav-open');
+      if (!menuOpen) {
+        const goingDown = y > lastY && y > 140;
+        header.classList.toggle('header-hidden', goingDown);
+      }
+
+      backToTop.classList.toggle('is-visible', y > 600);
+
+      lastY = y;
+      ticking = false;
+    }
+
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        requestAnimationFrame(onScroll);
+        ticking = true;
+      }
+    }, { passive: true });
+    onScroll();
+
+    backToTop.addEventListener('click', () => {
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+    });
+
+    // Scrollspy: highlight the nav link for whichever section is in view.
+    const navLinks = document.querySelectorAll('.nav-link');
+    const spySections = [...navLinks]
+      .map(link => document.querySelector(link.getAttribute('href')))
+      .filter(Boolean);
+
+    const spy = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        navLinks.forEach(link => {
+          link.classList.toggle('is-active', link.getAttribute('href') === `#${entry.target.id}`);
+        });
+      });
+    }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+
+    spySections.forEach(section => spy.observe(section));
   </script>
 </body>
 </html>
