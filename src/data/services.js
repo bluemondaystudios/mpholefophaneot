@@ -143,14 +143,4 @@ export const services = [
       },
     ],
   },
-  {
-    icon: '/icon-paediatric.jpg',
-    title: 'Paediatric Rehabilitation',
-    groups: [
-      {
-        label: 'Support for children with:',
-        items: ['Autism spectrum disorder (ASD)', 'ADHD', 'Cerebral palsy', 'Down syndrome'],
-      },
-    ],
-  },
 ];
