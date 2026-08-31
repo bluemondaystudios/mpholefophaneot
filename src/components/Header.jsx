@@ -5,7 +5,6 @@ const NAV_LINKS = [
   { href: '#about', label: 'About' },
   { href: '#milestones', label: 'Milestones' },
   { href: '#services', label: 'Services' },
-  { href: '#approach', label: 'Our approach' },
 ];
 
 export default function Header({ hidden, activeSection, menuOpen, onToggleMenu, onCloseMenu }) {

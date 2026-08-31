@@ -6,14 +6,13 @@ import Hero from './components/Hero.jsx';
 import About from './components/About.jsx';
 import Milestones from './components/Milestones.jsx';
 import Services from './components/Services.jsx';
-import Approach from './components/Approach.jsx';
 import CtaBand from './components/CtaBand.jsx';
 import Contact from './components/Contact.jsx';
 import Footer from './components/Footer.jsx';
 import WhatsAppButton from './components/WhatsAppButton.jsx';
 import BackToTop from './components/BackToTop.jsx';
 
-const SECTION_IDS = ['home', 'about', 'milestones', 'services', 'approach', 'contact'];
+const SECTION_IDS = ['home', 'about', 'milestones', 'services', 'contact'];
 
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -35,7 +34,6 @@ export default function App() {
         <About />
         <Milestones />
         <Services />
-        <Approach />
         <CtaBand />
         <Contact />
       </main>
