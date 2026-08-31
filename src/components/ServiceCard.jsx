@@ -10,19 +10,19 @@ export default function ServiceCard({ service, delay = 0 }) {
     <Reveal
       as="article"
       delay={delay}
-      className="rounded-3xl bg-cream-50 p-7 shadow-sm ring-1 ring-stone-100 transition hover:-translate-y-1 hover:shadow-warm"
+      className="rounded-3xl bg-cream-50 p-7 shadow-sm ring-1 ring-stone-100 transition hover:-translate-y-1 hover:shadow-warm dark:bg-navy-800 dark:ring-white/10"
     >
-      <img src={service.icon} width="240" height="240" alt="" loading="lazy" decoding="async" className="h-14 w-14 rounded-full object-cover ring-1 ring-stone-100" />
-      <h3 className="mt-5 text-xl font-semibold text-navy">{service.title}</h3>
+      <img src={service.icon} width="240" height="240" alt="" loading="lazy" decoding="async" className="h-14 w-14 rounded-full object-cover ring-1 ring-stone-100 dark:ring-white/10" />
+      <h3 className="mt-5 text-xl font-semibold text-navy dark:text-cream-50">{service.title}</h3>
 
-      {service.summary && <p className="mt-3 leading-7 text-stone-600">{service.summary}</p>}
+      {service.summary && <p className="mt-3 leading-7 text-stone-600 dark:text-stone-400">{service.summary}</p>}
 
       {hasDetails && (
         <div className="mt-4">
           <button
             onClick={() => setOpen((v) => !v)}
             aria-expanded={open}
-            className="flex cursor-pointer items-center gap-1.5 text-sm font-semibold text-coral-600 transition hover:text-coral-700"
+            className="flex cursor-pointer items-center gap-1.5 text-sm font-semibold text-coral-600 transition hover:text-coral-700 dark:text-coral-300 dark:hover:text-coral-200"
           >
             See details
             <motion.svg
@@ -50,8 +50,8 @@ export default function ServiceCard({ service, delay = 0 }) {
                 <div className="pt-3">
                   {service.groups.map((group, i) => (
                     <div key={group.label ?? i} className={i > 0 ? 'mt-4' : ''}>
-                      {group.label && <p className="text-xs font-semibold uppercase tracking-wide text-navy/70">{group.label}</p>}
-                      <ul className={`list-disc space-y-1.5 pl-4 text-sm leading-6 text-stone-600 ${group.label ? 'mt-2' : ''}`}>
+                      {group.label && <p className="text-xs font-semibold uppercase tracking-wide text-navy/70 dark:text-cream-50/70">{group.label}</p>}
+                      <ul className={`list-disc space-y-1.5 pl-4 text-sm leading-6 text-stone-600 dark:text-stone-400 ${group.label ? 'mt-2' : ''}`}>
                         {group.items.map((item) => (
                           <li key={item}>{item}</li>
                         ))}

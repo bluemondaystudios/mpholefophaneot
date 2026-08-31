@@ -13,7 +13,7 @@ export default function BackToTop({ visible }) {
         <motion.button
           onClick={handleClick}
           aria-label="Back to top"
-          className="fixed bottom-24 right-5 z-40 flex h-12 w-12 items-center justify-center rounded-full bg-cream-50 text-navy shadow-xl ring-1 ring-stone-200 transition hover:-translate-y-1 hover:text-coral-600 md:bottom-5"
+          className="fixed bottom-24 right-5 z-40 flex h-12 w-12 items-center justify-center rounded-full bg-cream-50 text-navy shadow-xl ring-1 ring-stone-200 transition hover:-translate-y-1 hover:text-coral-600 md:bottom-5 dark:bg-navy-800 dark:text-cream-50 dark:ring-white/10 dark:hover:text-coral-300"
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 12 }}

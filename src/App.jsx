@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useScrollState } from './hooks/useScrollState.js';
+import { useTheme } from './hooks/useTheme.js';
 import ScrollProgress from './components/ScrollProgress.jsx';
 import Header from './components/Header.jsx';
 import Hero from './components/Hero.jsx';
@@ -17,6 +18,7 @@ const SECTION_IDS = ['home', 'about', 'milestones', 'services', 'contact'];
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const { progress, headerHidden, showBackToTop, activeSection } = useScrollState(SECTION_IDS, menuOpen);
+  const { theme, toggleTheme } = useTheme();
 
   return (
     <div className="page-fade">
@@ -27,6 +29,8 @@ export default function App() {
         menuOpen={menuOpen}
         onToggleMenu={() => setMenuOpen((v) => !v)}
         onCloseMenu={() => setMenuOpen(false)}
+        theme={theme}
+        onToggleTheme={toggleTheme}
       />
 
       <main>

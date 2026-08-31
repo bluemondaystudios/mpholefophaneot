@@ -5,12 +5,12 @@ import { services } from '../data/services.js';
 
 function Services() {
   return (
-    <section id="services" className="scroll-mt-28 bg-coral-50/40 py-20 lg:py-28">
+    <section id="services" className="scroll-mt-28 bg-coral-50/40 py-20 lg:py-28 dark:bg-navy-800/40">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Reveal className="max-w-2xl">
-          <p className="text-sm font-bold uppercase tracking-[0.2em] text-coral-600">Services</p>
-          <h2 className="mt-3 text-4xl font-semibold tracking-tight text-navy sm:text-5xl">Support for different stages of life.</h2>
-          <p className="mt-5 text-lg leading-8 text-stone-600">
+          <p className="text-sm font-bold uppercase tracking-[0.2em] text-coral-600 dark:text-coral-300">Services</p>
+          <h2 className="mt-3 text-4xl font-semibold tracking-tight text-navy sm:text-5xl dark:text-cream-50">Support for different stages of life.</h2>
+          <p className="mt-5 text-lg leading-8 text-stone-600 dark:text-stone-400">
             A broad occupational therapy offering, with care tailored to the individual rather than a one-size-fits-all programme.
           </p>
         </Reveal>

@@ -10,14 +10,14 @@ const WHY_OT = [
 
 function About() {
   return (
-    <section id="about" className="scroll-mt-28 bg-cream-50 py-20 lg:py-28">
+    <section id="about" className="scroll-mt-28 bg-cream-50 py-20 lg:py-28 dark:bg-navy-900">
       <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
         <Reveal>
-          <p className="text-sm font-bold uppercase tracking-[0.2em] text-coral-600">Meet Mpho</p>
-          <h2 className="mt-3 max-w-xl text-4xl font-semibold tracking-tight text-navy sm:text-5xl">
+          <p className="text-sm font-bold uppercase tracking-[0.2em] text-coral-600 dark:text-coral-300">Meet Mpho</p>
+          <h2 className="mt-3 max-w-xl text-4xl font-semibold tracking-tight text-navy sm:text-5xl dark:text-cream-50">
             An Occupational Therapist in Pretoria Central
           </h2>
-          <p className="mt-6 max-w-xl text-lg leading-8 text-stone-600">
+          <p className="mt-6 max-w-xl text-lg leading-8 text-stone-600 dark:text-stone-400">
             Mpho Lefophane is a qualified Occupational Therapist with a Bachelor of Occupational Therapy (B.Occ) from
             Sefako Makgatho Health Sciences University, registered with the Health Professions Council of South
             Africa (HPCSA). She is passionate about helping people of all ages build independence, improve their

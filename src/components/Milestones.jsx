@@ -4,25 +4,25 @@ import FadeImage from './FadeImage.jsx';
 
 function Milestones() {
   return (
-    <section id="milestones" className="scroll-mt-28 bg-cream-50 py-20 lg:py-28">
+    <section id="milestones" className="scroll-mt-28 bg-cream-50 py-20 lg:py-28 dark:bg-navy-900">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Reveal className="max-w-2xl">
-          <p className="text-sm font-bold uppercase tracking-[0.2em] text-coral-600">Milestones</p>
-          <h2 className="mt-3 text-4xl font-semibold tracking-tight text-navy sm:text-5xl">
+          <p className="text-sm font-bold uppercase tracking-[0.2em] text-coral-600 dark:text-coral-300">Milestones</p>
+          <h2 className="mt-3 text-4xl font-semibold tracking-tight text-navy sm:text-5xl dark:text-cream-50">
             Qualified, and present in the community.
           </h2>
-          <p className="mt-5 text-lg leading-8 text-stone-600">
+          <p className="mt-5 text-lg leading-8 text-stone-600 dark:text-stone-400">
             A qualified, registered Occupational Therapist with the Health Professions Council of South Africa
             (HPCSA).
           </p>
           <div className="mt-6 flex flex-wrap gap-4">
-            <div className="rounded-2xl bg-coral-50 px-5 py-3">
-              <p className="text-xs font-semibold uppercase tracking-wider text-stone-500">Practice number</p>
-              <p className="mt-1 font-semibold text-navy">1296477</p>
+            <div className="rounded-2xl bg-coral-50 px-5 py-3 dark:bg-coral-500/10">
+              <p className="text-xs font-semibold uppercase tracking-wider text-stone-500 dark:text-stone-400">Practice number</p>
+              <p className="mt-1 font-semibold text-navy dark:text-cream-50">1296477</p>
             </div>
-            <div className="rounded-2xl bg-teal-50 px-5 py-3">
-              <p className="text-xs font-semibold uppercase tracking-wider text-stone-500">HPCSA number</p>
-              <p className="mt-1 font-semibold text-navy">OT 0115665</p>
+            <div className="rounded-2xl bg-teal-50 px-5 py-3 dark:bg-teal-500/10">
+              <p className="text-xs font-semibold uppercase tracking-wider text-stone-500 dark:text-stone-400">HPCSA number</p>
+              <p className="mt-1 font-semibold text-navy dark:text-cream-50">OT 0115665</p>
             </div>
           </div>
         </Reveal>

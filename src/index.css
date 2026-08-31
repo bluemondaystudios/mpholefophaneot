@@ -5,8 +5,14 @@
 html {
   scroll-behavior: smooth;
   /* Matches body's background so overscroll bounce (iOS/Android rubber-band
-     scrolling) doesn't expose the browser's default white past the edges. */
+     scrolling) doesn't expose the browser's default white past the edges.
+     Plain CSS (not a Tailwind dark: utility) because <html> itself carries
+     no Tailwind classes — only the 'dark' class toggled by useTheme. */
   background-color: #fffdf9;
+}
+
+html.dark {
+  background-color: #1e2a39;
 }
 
 body {
