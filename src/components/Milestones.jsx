@@ -12,13 +12,23 @@ function Milestones() {
             Qualified, and present in the community.
           </h2>
           <p className="mt-5 text-lg leading-8 text-stone-600">
-            From the day the qualification was earned to the sessions shared with clients and community groups, every
-            milestone shapes the way care is delivered.
+            A qualified, registered Occupational Therapist with the Health Professions Council of South Africa
+            (HPCSA).
           </p>
+          <div className="mt-6 flex flex-wrap gap-4">
+            <div className="rounded-2xl bg-coral-50 px-5 py-3">
+              <p className="text-xs font-semibold uppercase tracking-wider text-stone-500">Practice number</p>
+              <p className="mt-1 font-semibold text-navy">1296477</p>
+            </div>
+            <div className="rounded-2xl bg-teal-50 px-5 py-3">
+              <p className="text-xs font-semibold uppercase tracking-wider text-stone-500">HPCSA number</p>
+              <p className="mt-1 font-semibold text-navy">OT 0115665</p>
+            </div>
+          </div>
         </Reveal>
 
-        <div className="mt-12 grid gap-8 lg:grid-cols-12 lg:items-end">
-          <Reveal className="relative lg:col-span-4">
+        <div className="mt-12 grid gap-8 sm:grid-cols-2">
+          <Reveal className="relative">
             <div className="absolute -inset-3 rounded-[2.5rem] bg-coral-100/60 blur-2xl" />
             <div className="relative overflow-hidden rounded-[2rem] shadow-soft">
               <FadeImage
@@ -37,13 +47,7 @@ function Milestones() {
             </div>
           </Reveal>
 
-          <Reveal delay={0.1} className="flex flex-col justify-center lg:col-span-4 lg:self-center">
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-coral-600">Her education</p>
-            <p className="display mt-3 text-2xl font-semibold italic text-navy">A qualification earned, put into practice.</p>
-            <p className="mt-4 text-sm font-semibold uppercase tracking-wide text-navy/70">PR No. 1296477 · HPCSA No. OT 0115665</p>
-          </Reveal>
-
-          <Reveal delay={0.2} className="relative lg:col-span-4">
+          <Reveal delay={0.1} className="relative">
             <div className="relative overflow-hidden rounded-[2rem] shadow-soft">
               <FadeImage
                 src="/group.jpg"
@@ -52,10 +56,10 @@ function Milestones() {
                 alt="Group photo from a recent occupational therapy group session"
                 loading="lazy"
                 decoding="async"
-                className="h-[280px] w-full object-cover sm:h-[340px] lg:h-[420px]"
+                className="h-[420px] w-full object-cover sm:h-[480px]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/0 to-transparent" />
-              <div className="absolute inset-x-0 bottom-0 p-6 pt-12 text-white">
+              <div className="absolute inset-x-0 bottom-0 p-6 pt-16 text-white">
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-coral-200">Community in practice</p>
                 <p className="display mt-1 text-xl italic">A recent group therapy session</p>
               </div>

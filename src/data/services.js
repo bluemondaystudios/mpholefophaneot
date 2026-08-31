@@ -120,11 +120,26 @@ export const services = [
   {
     icon: '/icon-physical.jpg',
     title: 'Physical Rehabilitation',
-    summary: 'Support following stroke, traumatic brain injuries, motor vehicle accidents and other conditions affecting function and independence.',
+    groups: [
+      {
+        label: 'Support following:',
+        items: [
+          'Stroke',
+          'Traumatic brain injuries',
+          'Motor vehicle accidents',
+          'Other conditions affecting function and independence',
+        ],
+      },
+    ],
   },
   {
     icon: '/icon-paediatric.jpg',
     title: 'Paediatric Rehabilitation',
-    summary: 'Support for children with autism spectrum disorder (ASD), ADHD, cerebral palsy and Down syndrome.',
+    groups: [
+      {
+        label: 'Support for children with:',
+        items: ['Autism spectrum disorder (ASD)', 'ADHD', 'Cerebral palsy', 'Down syndrome'],
+      },
+    ],
   },
 ];
