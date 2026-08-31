@@ -49,16 +49,16 @@ function Hero() {
               </div>
             </div>
           </div>
-          <div className="absolute -bottom-6 left-[-280px] hidden rounded-2xl bg-cream-50 p-4 shadow-xl lg:block">
+          <div className="absolute -bottom-6 left-[-280px] hidden rounded-2xl bg-cream-50 p-4 shadow-xl lg:block dark:bg-navy-800 dark:shadow-black/40">
             <div className="flex items-center gap-3">
-              <div className="flex h-11 w-11 items-center justify-center rounded-full bg-coral-100 text-coral-600">
+              <div className="flex h-11 w-11 items-center justify-center rounded-full bg-coral-100 text-coral-600 dark:bg-coral-500/15 dark:text-coral-300">
                 <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 21s8-4.5 8-10.5A4.5 4.5 0 0012 7a4.5 4.5 0 00-8 3.5C4 16.5 12 21 12 21z" />
                 </svg>
               </div>
               <div>
-                <p className="font-semibold text-navy">Compassionate care</p>
-                <p className="text-xs text-stone-500">Personalised to your needs</p>
+                <p className="font-semibold text-navy dark:text-cream-50">Compassionate care</p>
+                <p className="text-xs text-stone-500 dark:text-stone-400">Personalised to your needs</p>
               </div>
             </div>
           </div>

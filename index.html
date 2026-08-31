@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mpho Lefophane Occupational Therapy | Care That Meets You</title>
   <meta name="description" content="Mpho Lefophane Occupational Therapy provides client-centred occupational therapy, rehabilitation, paediatric support, functional capacity evaluations, assistive devices and home modifications in Pretoria.">
-  <meta name="theme-color" content="#33465f">
+  <meta name="theme-color" content="#33465f" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1e2a39" media="(prefers-color-scheme: dark)">
   <meta property="og:title" content="Mpho Lefophane Occupational Therapy">
   <meta property="og:description" content="Care that meets you: occupational therapy delivered in the comfort of your home, school or office.">
   <meta property="og:type" content="website">
@@ -30,8 +31,17 @@
     "areaServed":"Pretoria, Gauteng, South Africa"
   }
   </script>
+  <script>
+    // Applied before React mounts so the page never flashes the wrong
+    // theme on load. Mirrors the logic in src/hooks/useTheme.js.
+    (function () {
+      var stored = localStorage.getItem('theme');
+      var dark = stored ? stored === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+      document.documentElement.classList.toggle('dark', dark);
+    })();
+  </script>
 </head>
-<body class="bg-cream-50 text-stone-800 antialiased">
+<body class="bg-cream-50 text-stone-800 antialiased transition-colors dark:bg-navy-900 dark:text-stone-200">
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
 </body>
