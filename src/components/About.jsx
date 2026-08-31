@@ -21,7 +21,7 @@ function About() {
         <Reveal>
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-coral-600">Meet Mpho</p>
           <h2 className="mt-3 max-w-xl text-4xl font-semibold tracking-tight text-navy sm:text-5xl">
-            Therapy built around real life.
+            An Occupational Therapist in Pretoria Central
           </h2>
           <p className="mt-6 max-w-xl text-lg leading-8 text-stone-600">
             Mpho Lefophane is a qualified Occupational Therapist with a Bachelor of Occupational Therapy (B.Occ) from

@@ -114,17 +114,36 @@ export const services = [
   },
   {
     icon: '/icon-legal.jpg',
-    title: 'Assessment & Report Writing',
-    summary: 'Functional capacity evaluations and medico-legal reporting for relevant cases.',
+    title: 'Functional Capacity Evaluation & Medico-Legal Reports',
+    groups: [
+      {
+        items: ['Functional capacity evaluations', 'Medico-legal reports'],
+      },
+    ],
   },
   {
     icon: '/icon-physical.jpg',
     title: 'Physical Rehabilitation',
-    summary: 'Support following stroke, traumatic brain injuries, motor vehicle accidents and other conditions affecting function and independence.',
+    groups: [
+      {
+        label: 'Support following:',
+        items: [
+          'Stroke',
+          'Traumatic brain injuries',
+          'Motor vehicle accidents',
+          'Other conditions affecting function and independence',
+        ],
+      },
+    ],
   },
   {
     icon: '/icon-paediatric.jpg',
     title: 'Paediatric Rehabilitation',
-    summary: 'Support for children with autism spectrum disorder (ASD), ADHD, cerebral palsy and Down syndrome.',
+    groups: [
+      {
+        label: 'Support for children with:',
+        items: ['Autism spectrum disorder (ASD)', 'ADHD', 'Cerebral palsy', 'Down syndrome'],
+      },
+    ],
   },
 ];
