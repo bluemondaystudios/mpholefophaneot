@@ -1,4 +1,6 @@
-export default function Footer() {
+import { memo } from 'react';
+
+function Footer() {
   return (
     <footer className="bg-cream-50 py-10">
       <div className="mx-auto flex max-w-7xl flex-col gap-5 px-4 sm:px-6 md:flex-row md:items-center md:justify-between lg:px-8">
@@ -14,3 +16,5 @@ export default function Footer() {
     </footer>
   );
 }
+
+export default memo(Footer);

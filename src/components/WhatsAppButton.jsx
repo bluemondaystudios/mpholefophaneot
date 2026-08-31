@@ -1,6 +1,7 @@
+import { memo } from 'react';
 import { motion } from 'framer-motion';
 
-export default function WhatsAppButton() {
+function WhatsAppButton() {
   return (
     <motion.a
       href="https://wa.me/27661342941?text=Hello%20Mpho%2C%20I%27d%20like%20to%20make%20an%20occupational%20therapy%20enquiry."
@@ -15,3 +16,5 @@ export default function WhatsAppButton() {
     </motion.a>
   );
 }
+
+export default memo(WhatsAppButton);

@@ -1,7 +1,11 @@
+import { memo } from 'react';
 import Reveal from './Reveal.jsx';
 import FadeImage from './FadeImage.jsx';
 
-export default function Hero() {
+// Memoized: takes no props, so this bails out of re-rendering when App
+// re-renders for scroll-driven state (header hide/show, progress bar,
+// back-to-top) that has nothing to do with this section.
+function Hero() {
   return (
     <section id="home" className="warm-orb relative overflow-hidden pt-32 text-white lg:pt-40">
       <div className="relative mx-auto grid max-w-7xl items-center gap-14 px-4 pb-20 sm:px-6 lg:grid-cols-[1.05fr_.95fr] lg:px-8 lg:pb-28">
@@ -63,3 +67,5 @@ export default function Hero() {
     </section>
   );
 }
+
+export default memo(Hero);
