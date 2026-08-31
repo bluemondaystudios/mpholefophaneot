@@ -4,8 +4,33 @@ import Reveal from './Reveal.jsx';
 function Contact() {
   return (
     <section id="contact" className="scroll-mt-28 bg-teal-50/50 py-20 lg:py-28">
-      <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[1fr_.85fr] lg:px-8">
-        <Reveal>
+      <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[.85fr_1fr] lg:px-8">
+        <Reveal className="rounded-[2rem] bg-cream-50 p-7 shadow-soft sm:p-9 lg:order-1">
+          <p className="text-sm font-bold uppercase tracking-[0.2em] text-coral-600">Professional details</p>
+          <h3 className="mt-3 text-2xl font-semibold text-navy">A qualified, registered practitioner.</h3>
+          <div className="mt-7 divide-y divide-stone-100">
+            <div className="flex justify-between gap-4 py-4">
+              <span className="text-stone-500">Practice number</span>
+              <strong className="text-navy">1296477</strong>
+            </div>
+            <div className="flex justify-between gap-4 py-4">
+              <span className="text-stone-500">HPCSA number</span>
+              <strong className="text-navy">OT 0115665</strong>
+            </div>
+          </div>
+          <a
+            href="mailto:mpholefophane@icloud.com?subject=Website%20Enquiry&body=Name%3A%20%0APhone%3A%20%0AEnquiry%3A%20"
+            className="mt-7 flex w-full items-center justify-center rounded-xl bg-navy px-5 py-3.5 font-semibold text-white transition hover:bg-coral-600"
+          >
+            Send an enquiry by email
+          </a>
+          <p className="mt-4 text-center text-xs leading-5 text-stone-400">
+            This opens your email app with a template ready to fill in and send — please avoid including sensitive medical information
+            over email.
+          </p>
+        </Reveal>
+
+        <Reveal delay={0.1} className="lg:order-2">
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-coral-600">Contact</p>
           <h2 className="mt-3 text-4xl font-semibold tracking-tight text-navy sm:text-5xl">Ready when you are.</h2>
           <p className="mt-5 max-w-xl text-lg leading-8 text-stone-600">
@@ -55,32 +80,7 @@ function Contact() {
           </div>
         </Reveal>
 
-        <Reveal delay={0.1} className="rounded-[2rem] bg-cream-50 p-7 shadow-soft sm:p-9">
-          <p className="text-sm font-bold uppercase tracking-[0.2em] text-coral-600">Professional details</p>
-          <h3 className="mt-3 text-2xl font-semibold text-navy">A qualified, registered practitioner.</h3>
-          <div className="mt-7 divide-y divide-stone-100">
-            <div className="flex justify-between gap-4 py-4">
-              <span className="text-stone-500">Practice number</span>
-              <strong className="text-navy">1296477</strong>
-            </div>
-            <div className="flex justify-between gap-4 py-4">
-              <span className="text-stone-500">HPCSA number</span>
-              <strong className="text-navy">OT 0115665</strong>
-            </div>
-          </div>
-          <a
-            href="mailto:mpholefophane@icloud.com?subject=Website%20Enquiry&body=Name%3A%20%0APhone%3A%20%0AEnquiry%3A%20"
-            className="mt-7 flex w-full items-center justify-center rounded-xl bg-navy px-5 py-3.5 font-semibold text-white transition hover:bg-coral-600"
-          >
-            Send an enquiry by email
-          </a>
-          <p className="mt-4 text-center text-xs leading-5 text-stone-400">
-            This opens your email app with a template ready to fill in and send — please avoid including sensitive medical information
-            over email.
-          </p>
-        </Reveal>
-
-        <Reveal delay={0.15} className="overflow-hidden rounded-[2rem] shadow-soft lg:col-span-2">
+        <Reveal delay={0.15} className="overflow-hidden rounded-[2rem] shadow-soft lg:order-3 lg:col-span-2">
           <iframe
             src="https://www.google.com/maps?q=Intercare%20The%20Tramshed%2C%20Cnr%20Francis%20Baard%20%26%20Lilian%20Ngoyi%2C%20Pretoria%20CBD&output=embed"
             className="h-72 w-full border-0 sm:h-96"

@@ -114,10 +114,17 @@ export const services = [
   },
   {
     icon: '/icon-legal.jpg',
-    title: 'Functional Capacity Evaluation & Medico-Legal Reports',
+    title: 'Assessment & Report Writing',
     groups: [
       {
-        items: ['Functional capacity evaluations', 'Medico-legal reports'],
+        label: 'Includes:',
+        items: [
+          'Functional capacity evaluations (FCEs)',
+          'Medico-legal reports for personal injury and Road Accident Fund (RAF) claims',
+          'Reports prepared for attorneys, insurers and employers',
+          'Assessing how injury or illness affects daily function and work capacity',
+          'Recommendations for future care, equipment and rehabilitation needs',
+        ],
       },
     ],
   },

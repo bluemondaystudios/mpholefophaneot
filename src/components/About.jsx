@@ -1,12 +1,6 @@
 import { memo } from 'react';
 import Reveal from './Reveal.jsx';
 
-const PRINCIPLES = [
-  { num: '01', label: 'Person-centred', tone: 'coral' },
-  { num: '02', label: 'Goal-focused', tone: 'teal' },
-  { num: '03', label: 'Practical', tone: 'coral' },
-];
-
 const WHY_OT = [
   'Support independence and participation in everyday activities.',
   'Build practical skills following injury, illness or developmental challenges.',
@@ -29,14 +23,6 @@ function About() {
             Africa (HPCSA). She is passionate about helping people of all ages build independence, improve their
             quality of life and take part in the activities that matter most to them.
           </p>
-          <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3">
-            {PRINCIPLES.map((p) => (
-              <div key={p.num} className={`rounded-2xl p-5 ${p.tone === 'coral' ? 'bg-coral-50' : 'bg-teal-50'}`}>
-                <p className={`display text-2xl font-semibold ${p.tone === 'coral' ? 'text-coral-600' : 'text-teal-700'}`}>{p.num}</p>
-                <p className="mt-1 text-sm text-stone-600">{p.label}</p>
-              </div>
-            ))}
-          </div>
         </Reveal>
 
         <Reveal delay={0.1} className="rounded-[2rem] bg-navy p-8 text-white shadow-soft sm:p-10">
