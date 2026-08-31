@@ -7,7 +7,42 @@ const NAV_LINKS = [
   { href: '#services', label: 'Services' },
 ];
 
+// Closing the mobile menu re-renders + reflows the page while the browser's
+// native smooth-scroll animator is still mid-flight, and that animator
+// silently cancels itself on essentially any reflow during the scroll —
+// not just one in the same tick, a delay of a few frames doesn't dodge it
+// either, since the scroll itself takes hundreds of ms. Driving the scroll
+// ourselves frame-by-frame sidesteps that entirely: nothing to cancel, we
+// just keep re-setting the position every frame until we arrive.
+function smoothScrollTo(targetY, duration = 500) {
+  const startY = window.scrollY;
+  const diff = targetY - startY;
+  if (diff === 0) return;
+  const startTime = performance.now();
+
+  function step(now) {
+    const t = Math.min((now - startTime) / duration, 1);
+    const eased = 1 - Math.pow(1 - t, 3); // ease-out cubic
+    window.scrollTo(0, startY + diff * eased);
+    if (t < 1) requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+}
+
 export default function Header({ hidden, activeSection, menuOpen, onToggleMenu, onCloseMenu, theme, onToggleTheme }) {
+  function handleNavClick(e, href) {
+    e.preventDefault();
+    const target = document.querySelector(href);
+    if (target) {
+      history.pushState(null, '', href); // matches native hash-navigation, without its scroll step
+      const scrollMarginTop = parseFloat(getComputedStyle(target).scrollMarginTop) || 0;
+      const targetY = window.scrollY + target.getBoundingClientRect().top - scrollMarginTop;
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      reduceMotion ? window.scrollTo(0, targetY) : smoothScrollTo(targetY);
+    }
+    onCloseMenu();
+  }
+
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-transform duration-300 ease-out ${hidden ? '-translate-y-[130%]' : 'translate-y-0'}`}
@@ -66,13 +101,17 @@ export default function Header({ hidden, activeSection, menuOpen, onToggleMenu, 
                 <a
                   key={link.href}
                   href={link.href}
-                  onClick={onCloseMenu}
+                  onClick={(e) => handleNavClick(e, link.href)}
                   className="rounded-xl px-4 py-3 font-medium text-navy hover:bg-coral-50 dark:text-cream-50 dark:hover:bg-white/5"
                 >
                   {link.label}
                 </a>
               ))}
-              <a href="#contact" onClick={onCloseMenu} className="mt-2 rounded-xl bg-navy px-4 py-3 text-center font-semibold text-white">
+              <a
+                href="#contact"
+                onClick={(e) => handleNavClick(e, '#contact')}
+                className="mt-2 rounded-xl bg-navy px-4 py-3 text-center font-semibold text-white"
+              >
                 Book / enquire
               </a>
             </motion.div>
