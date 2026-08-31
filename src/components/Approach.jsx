@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import Reveal from './Reveal.jsx';
 
 const STEPS = [
@@ -6,7 +7,7 @@ const STEPS = [
   { num: '03', title: 'At our office', desc: 'Professional consultations at the practice in Pretoria.', tone: 'coral' },
 ];
 
-export default function Approach() {
+function Approach() {
   return (
     <section id="approach" className="scroll-mt-28 py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -31,3 +32,5 @@ export default function Approach() {
     </section>
   );
 }
+
+export default memo(Approach);

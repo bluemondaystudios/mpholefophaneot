@@ -4,6 +4,9 @@
 
 html {
   scroll-behavior: smooth;
+  /* Matches body's background so overscroll bounce (iOS/Android rubber-band
+     scrolling) doesn't expose the browser's default white past the edges. */
+  background-color: #fffdf9;
 }
 
 body {

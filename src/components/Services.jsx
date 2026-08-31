@@ -1,8 +1,9 @@
+import { memo } from 'react';
 import Reveal from './Reveal.jsx';
 import ServiceCard from './ServiceCard.jsx';
 import { services } from '../data/services.js';
 
-export default function Services() {
+function Services() {
   return (
     <section id="services" className="scroll-mt-28 bg-coral-50/40 py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -42,3 +43,5 @@ export default function Services() {
     </section>
   );
 }
+
+export default memo(Services);

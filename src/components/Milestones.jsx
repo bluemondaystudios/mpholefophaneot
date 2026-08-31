@@ -1,7 +1,8 @@
+import { memo } from 'react';
 import Reveal from './Reveal.jsx';
 import FadeImage from './FadeImage.jsx';
 
-export default function Milestones() {
+function Milestones() {
   return (
     <section id="milestones" className="scroll-mt-28 bg-cream-50 py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -65,3 +66,5 @@ export default function Milestones() {
     </section>
   );
 }
+
+export default memo(Milestones);

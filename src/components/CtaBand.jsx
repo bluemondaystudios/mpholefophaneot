@@ -1,6 +1,7 @@
+import { memo } from 'react';
 import Reveal from './Reveal.jsx';
 
-export default function CtaBand() {
+function CtaBand() {
   return (
     <section className="warm-orb py-20 text-white lg:py-24">
       <div className="mx-auto max-w-5xl px-4 text-center sm:px-6">
@@ -22,3 +23,5 @@ export default function CtaBand() {
     </section>
   );
 }
+
+export default memo(CtaBand);

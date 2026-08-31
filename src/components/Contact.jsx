@@ -1,6 +1,7 @@
+import { memo } from 'react';
 import Reveal from './Reveal.jsx';
 
-export default function Contact() {
+function Contact() {
   return (
     <section id="contact" className="scroll-mt-28 bg-teal-50/50 py-20 lg:py-28">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[1fr_.85fr] lg:px-8">
@@ -92,3 +93,5 @@ export default function Contact() {
     </section>
   );
 }
+
+export default memo(Contact);

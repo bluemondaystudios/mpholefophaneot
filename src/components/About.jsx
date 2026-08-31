@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import Reveal from './Reveal.jsx';
 
 const PRINCIPLES = [
@@ -13,7 +14,7 @@ const WHY_OT = [
   'Support children and families with development, learning and participation.',
 ];
 
-export default function About() {
+function About() {
   return (
     <section id="about" className="scroll-mt-28 bg-cream-50 py-20 lg:py-28">
       <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
@@ -66,3 +67,5 @@ export default function About() {
     </section>
   );
 }
+
+export default memo(About);
