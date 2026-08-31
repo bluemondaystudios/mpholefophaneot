@@ -114,8 +114,12 @@ export const services = [
   },
   {
     icon: '/icon-legal.jpg',
-    title: 'Assessment & Report Writing',
-    summary: 'Functional capacity evaluations and medico-legal reporting for relevant cases.',
+    title: 'Functional Capacity Evaluation & Medico-Legal Reports',
+    groups: [
+      {
+        items: ['Functional capacity evaluations', 'Medico-legal reports'],
+      },
+    ],
   },
   {
     icon: '/icon-physical.jpg',
