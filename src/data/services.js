@@ -1,13 +1,17 @@
 export const services = [
   {
-    icon: '/icon-infant.jpg',
-    title: 'Infant & Early Intervention',
+    icon: '/icon-paediatric.jpg',
+    title: 'Paediatric Rehabilitation, Infant and Early Intervention',
     groups: [
       {
         items: [
           'Developmental delays',
           'Premature birth follow-up',
           'Delayed milestones (rolling, sitting, crawling, walking)',
+          'Autism Spectrum Disorder (ASD)',
+          'ADHD',
+          'Cerebral palsy (CP)',
+          'Down syndrome',
         ],
       },
     ],

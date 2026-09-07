@@ -77,6 +77,23 @@ function Contact() {
                 <p className="mt-1 text-sm text-stone-500 dark:text-stone-400">Service area: Pretoria & surrounding areas</p>
               </div>
             </div>
+            <a
+              href="#mobile-services"
+              className="flex items-center gap-4 rounded-2xl bg-cream-50 p-5 shadow-sm ring-1 ring-stone-100 transition hover:ring-coral-200 dark:bg-navy-800 dark:ring-white/10 dark:hover:ring-coral-500/40"
+            >
+              <span className="flex h-11 w-11 items-center justify-center rounded-full bg-coral-100 text-coral-600 dark:bg-coral-500/15 dark:text-coral-300">
+                <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.75">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 13l1.5-4.5A2 2 0 016.4 7h11.2a2 2 0 011.9 1.5L21 13M3 13v4a1 1 0 001 1h1a1 1 0 001-1v-1h12v1a1 1 0 001 1h1a1 1 0 001-1v-4M3 13h18" />
+                  <circle cx="7" cy="17" r="1.5" />
+                  <circle cx="17" cy="17" r="1.5" />
+                </svg>
+              </span>
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-wider text-stone-400 dark:text-stone-500">Mobile services</p>
+                <p className="mt-1 font-semibold text-navy dark:text-cream-50">We come to you</p>
+                <p className="mt-1 text-sm text-stone-500 dark:text-stone-400">Home, school, workplace or care facility visits</p>
+              </div>
+            </a>
           </div>
         </Reveal>
 

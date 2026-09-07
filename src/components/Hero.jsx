@@ -28,6 +28,18 @@ function Hero() {
               Explore services
             </a>
           </div>
+
+          <a
+            href="#mobile-services"
+            className="mt-4 inline-flex w-fit items-center gap-2 rounded-full border border-white/25 bg-white/5 px-4 py-2 text-sm font-semibold text-cream-100 transition hover:border-white/50 hover:bg-white/10"
+          >
+            <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.75">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M3 13l1.5-4.5A2 2 0 016.4 7h11.2a2 2 0 011.9 1.5L21 13M3 13v4a1 1 0 001 1h1a1 1 0 001-1v-1h12v1a1 1 0 001 1h1a1 1 0 001-1v-4M3 13h18" />
+              <circle cx="7" cy="17" r="1.5" />
+              <circle cx="17" cy="17" r="1.5" />
+            </svg>
+            Mobile services — we come to you
+          </a>
         </Reveal>
 
         <Reveal delay={0.1} className="relative mx-auto w-full max-w-xl">

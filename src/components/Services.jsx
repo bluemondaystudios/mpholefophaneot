@@ -22,7 +22,8 @@ function Services() {
 
           <Reveal
             as="article"
-            className="flex flex-col items-start gap-5 rounded-3xl bg-navy p-8 text-white shadow-sm sm:col-span-2 sm:flex-row sm:items-center sm:justify-between lg:col-span-3"
+            id="mobile-services"
+            className="scroll-mt-28 flex flex-col items-start gap-5 rounded-3xl bg-navy p-8 text-white shadow-sm sm:col-span-2 sm:flex-row sm:items-center sm:justify-between lg:col-span-3"
           >
             <div>
               <p className="display text-xl italic text-coral-200 sm:text-2xl">Can't come to the practice? We'll come to you.</p>
